@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.yenisozluk">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".statistics"></activity>
+        <activity android:name=".kendin_yaz" />
+        <activity android:name=".bosluk_doldurma" />
+        <activity android:name=".kelime_eslestirme" />
+        <activity android:name=".coktan_secmeli" />
+        <activity android:name=".test_menu" />
+        <activity android:name=".kelime_ezberle_2" />
+        <activity android:name=".kelime_ezberle" />
+        <activity android:name=".PreferenceManager" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

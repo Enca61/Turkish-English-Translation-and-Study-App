@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/puzzle"
+    tools:context=".coktan_secmeli">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="218dp"
+        android:layout_height="295dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="184dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/cevap_1"
+            android:layout_width="213dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="49dp"
+            android:background="@drawable/buttonshape"
+            android:text="Button"
+            android:textColor="#FFFFFF"
+
+            />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <Button
+            android:id="@+id/cevap_2"
+            android:layout_width="213dp"
+            android:layout_height="45dp"
+            android:background="@drawable/buttonshape"
+            android:text="Button"
+            android:textColor="#FFFFFF" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp"/>
+
+        <Button
+            android:id="@+id/cevap_3"
+            android:layout_width="213dp"
+            android:layout_height="45dp"
+            android:background="@drawable/buttonshape"
+            android:text="Button"
+            android:textColor="#FFFFFF" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <Button
+            android:id="@+id/cevap_4"
+            android:layout_width="213dp"
+            android:layout_height="45dp"
+            android:background="@drawable/buttonshape"
+            android:text="Button"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/sonraki_soru"
+        android:layout_width="213dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="68dp"
+        android:background="@drawable/buttonshape"
+        android:text="Sonraki Soru"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text"></Button>
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="411dp"
+        android:layout_height="96dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="430dp"
+        android:text="Soru Kelimesi"
+        android:background="@drawable/beyaz"
+        android:textAlignment="center"
+        android:textColor="@color/darkbl"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/sonraki_soru"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

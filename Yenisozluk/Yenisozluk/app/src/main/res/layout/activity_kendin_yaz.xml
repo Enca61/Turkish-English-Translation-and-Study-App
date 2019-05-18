@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/puzzle"
+    tools:context=".kendin_yaz">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="82dp"
+        android:background="@drawable/beyaz"
+        android:text="ASD"
+        android:textColor="@color/darkbl"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/kontrol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/yaz"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="31dp"
+        android:background="@drawable/beyaz"
+        android:ems="10"
+        android:hint="Cevabı Giriniz"
+        android:inputType="textPersonName"
+        android:textColor="@android:color/background_dark"
+        app:layout_constraintBottom_toBottomOf="@+id/kontrol"
+        app:layout_constraintEnd_toStartOf="@+id/kontrol"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/kontrol" />
+
+    <Button
+        android:id="@+id/sonraki_soru"
+
+        android:layout_width="213dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginBottom="219dp"
+        android:background="@drawable/buttonshape"
+        android:text="Sonraki Soru"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kontrol" />
+
+    <Button
+        android:id="@+id/kontrol"
+        android:layout_width="0dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="117dp"
+        android:background="@drawable/buttonshape"
+        android:text="Dene"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/sonraki_soru"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/yaz"
+        app:layout_constraintTop_toBottomOf="@+id/text" />
+
+</android.support.constraint.ConstraintLayout>

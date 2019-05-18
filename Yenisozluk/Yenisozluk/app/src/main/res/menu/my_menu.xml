@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_ceviri"
+    android:title="Çeviri"
+    app:showAsAction="always" />
+    <item android:id="@+id/menu_kelime"
+        android:title="Kelime Ezberle"
+        app:showAsAction="always" />
+    <item android:id="@+id/menu_test"
+        android:title="Test"
+        app:showAsAction="always" />
+    <item android:id="@+id/menu_istatistik"
+        android:title="Istatistikler"
+        app:showAsAction="always" />
+
+
+
+
+
+</menu>
