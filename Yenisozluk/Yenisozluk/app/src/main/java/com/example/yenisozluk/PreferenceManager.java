@@ -82,6 +82,13 @@ public PreferenceManager (){
     public int Cekeslestirme(){
         return _preferences.getInt("eslestirme",0);
     }
+    public boolean setdatainfo(){
+        return _preferences.getBoolean("datainfo",false);
+    }
+    public void cekdatainfo(){
+        _editor.putBoolean("datainfo",_preferences.getBoolean("datainfo",true));
+        _editor.commit();
+    }
 
 
 

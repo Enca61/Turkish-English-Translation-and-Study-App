@@ -26,6 +26,7 @@ DataBaseHelper dbHelper;
 String kelime;
 int dil=2; // Uygulama ingilizceden türkçeye çeviri ile başladığı için
 static int ceviri_sayisi=0;
+static boolean data=false;
 
 
     @Override
@@ -60,7 +61,6 @@ static int ceviri_sayisi=0;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         dbHelper = new DataBaseHelper(getApplicationContext());
-        System.out.println("Merhabaaaaaaaaaaaaaaa");
         setContentView(R.layout.activity_main);
         final EditText editText = (EditText) findViewById(R.id.editText);
         final TextView textView = (TextView) findViewById(R.id.text);
@@ -70,8 +70,12 @@ static int ceviri_sayisi=0;
         final ImageView imageView = (ImageView) findViewById(R.id.imageView);
         final ImageView imageView2 = (ImageView) findViewById(R.id.imageView2);
         Button dildegis = (Button) findViewById(R.id.dildegis);
-        //dbHelper.ReadAllData(this); //csv yi okutmak için bir kere calıstır yeter
-        // dbHelper.DeleteAll();  //csv yi silmek için
+        if(!(com.example.yenisozluk.PreferenceManager.Instance(this).setdatainfo())) {
+            dbHelper.ReadAllData(this); //csv yi okutmak için bir kere calıstır yeter
+            com.example.yenisozluk.PreferenceManager.Instance(this).cekdatainfo();
+        }
+        //dbHelper.DeleteAll();  //csv yi silmek için
+
         System.out.println("Merhaba");
         final Button bspeak = (Button) findViewById(R.id.bspeak);
         bspeak.setVisibility(View.INVISIBLE); //ses butonu başta görünmez
@@ -167,4 +171,7 @@ static int ceviri_sayisi=0;
             tts.shutdown();
         }
         super.onDestroy();
-    }}
+    }
+
+
+}
