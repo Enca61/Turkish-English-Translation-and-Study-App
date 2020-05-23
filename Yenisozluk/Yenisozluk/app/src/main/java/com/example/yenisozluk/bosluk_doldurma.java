@@ -12,6 +12,8 @@ import android.widget.TextView;
 import java.util.Random;
 
 public class bosluk_doldurma extends AppCompatActivity {
+
+    StudyUtil mStudyUtil=new StudyUtil();
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.my_menu,menu);
@@ -122,7 +124,7 @@ public class bosluk_doldurma extends AppCompatActivity {
                 if(cevap_1.getText()==String.valueOf(yenirenk.cumlecevap(random)))
                 {
                     System.out.println("Doğru");
-                    PreferenceManager.Instance(getApplicationContext()).ArttirBoslukDoldurma();
+                    addBoslukDoldurma();
                     cevap_1.setBackgroundResource(R.drawable.buttonshapedogru);
                 }
                 else {
@@ -144,7 +146,7 @@ public class bosluk_doldurma extends AppCompatActivity {
                 if(cevap_2.getText()==String.valueOf(yenirenk.cumlecevap(random)))
                 {
                     System.out.println("Doğru");
-                    PreferenceManager.Instance(getApplicationContext()).ArttirBoslukDoldurma();
+                    addBoslukDoldurma();
                     cevap_2.setBackgroundResource(R.drawable.buttonshapedogru);
                 }
                 else {
@@ -159,7 +161,7 @@ public class bosluk_doldurma extends AppCompatActivity {
                 if(cevap_3.getText()==String.valueOf(yenirenk.cumlecevap(random)))
                 {
                     System.out.println("Doğru");
-                    PreferenceManager.Instance(getApplicationContext()).ArttirBoslukDoldurma();
+                    addBoslukDoldurma();
                     cevap_3.setBackgroundResource(R.drawable.buttonshapedogru);
                 }
                 else {
@@ -167,6 +169,8 @@ public class bosluk_doldurma extends AppCompatActivity {
                     cevap_3.setBackgroundResource(R.drawable.buttonshapeyanlis);
                 }
             }
+
+
         });
         cevap_4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -174,7 +178,7 @@ public class bosluk_doldurma extends AppCompatActivity {
                 if(cevap_4.getText()==String.valueOf(yenirenk.cumlecevap(random)))
                 {
                     System.out.println("Doğru");
-                    PreferenceManager.Instance(getApplicationContext()).ArttirBoslukDoldurma();
+                    addBoslukDoldurma();
                     cevap_4.setBackgroundResource(R.drawable.buttonshapedogru);
                 }
                 else {
@@ -189,10 +193,7 @@ public class bosluk_doldurma extends AppCompatActivity {
             sonraki_soru.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    cevap_1.setBackgroundResource(R.drawable.buttonshape);
-                    cevap_2.setBackgroundResource(R.drawable.buttonshape);
-                    cevap_3.setBackgroundResource(R.drawable.buttonshape);
-                    cevap_4.setBackgroundResource(R.drawable.buttonshape);
+                    mStudyUtil.setBackgroundResource(cevap_1,cevap_2,cevap_3,cevap_4);
                     random = new Random().nextInt(9);
                     soru=String.valueOf(yenirenk.cumlesoru(random));
                     text3.setText(soru);
@@ -257,6 +258,9 @@ public class bosluk_doldurma extends AppCompatActivity {
             });
 
         }
+    }
+    private void addBoslukDoldurma() {
+        PreferenceManager.Instance(getApplicationContext()).ArttirBoslukDoldurma();
     }
 
 }

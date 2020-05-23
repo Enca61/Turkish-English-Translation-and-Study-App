@@ -13,6 +13,8 @@ import java.util.Random;
 
 
 public class coktan_secmeli extends AppCompatActivity {
+    StudyUtil mStudyUtil=new StudyUtil();
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.my_menu,menu);
@@ -194,10 +196,7 @@ public class coktan_secmeli extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 random = new Random().nextInt(75);
-                cevap_1.setBackgroundResource(R.drawable.buttonshape);
-                cevap_2.setBackgroundResource(R.drawable.buttonshape);
-                cevap_3.setBackgroundResource(R.drawable.buttonshape);
-                cevap_4.setBackgroundResource(R.drawable.buttonshape);
+                mStudyUtil.setBackgroundResource(cevap_1, cevap_2, cevap_3, cevap_4);
                 dogrutr=String.valueOf(yenirenk.birlesmistr(random));
                 text.setText(dogrutr);
                 int sec =new Random().nextInt(3);
@@ -261,5 +260,8 @@ public class coktan_secmeli extends AppCompatActivity {
 
             }
         });
-    }}
+    }
+
+
+}
 
